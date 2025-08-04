@@ -1,0 +1,10 @@
+name = "playWave"
+uuid = "2fa93afa-7099-11f0-979e-9f67e737e74d"
+authors = ["Bruno RNS <brunoriansouza@gmail.com>"]
+version = "1.0.0"
+
+[deps]
+WAV = "8149f6b0-98f6-5db9-b78f-408fbbb8ef88"
+
+[compat]
+WAV = "1.2.0"

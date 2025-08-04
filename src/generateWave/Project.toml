@@ -1,0 +1,12 @@
+name = "generateWave"
+uuid = "2d3249b6-50c7-4207-bd6c-ae50f129ec78"
+authors = ["Bruno RNS <brunoriansouza@gmail.com>"]
+version = "1.0.0"
+
+[deps]
+MIDI = "f57c4921-e30c-5f49-b073-3f2f2ada663e"
+WAV = "8149f6b0-98f6-5db9-b78f-408fbbb8ef88"
+
+[compat]
+MIDI = "2.7.0"
+WAV = "1.2.0"

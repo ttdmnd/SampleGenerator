@@ -1,0 +1,68 @@
+###############################################################################
+# Makefile.build - Environment setup for Sample Generator project
+#
+# Handles building Python and Julia environments for main and test modules.
+###############################################################################
+
+.PHONY: build-python build-julia build-check-wave build-play-wave build-play-midi
+
+# Python project variables
+PY_PROJECT_DIR := src/generateNote
+PY_VENV := $(PY_PROJECT_DIR)/.venv
+
+# Julia project variables
+JULIA_PROJECT_DIR := src/generateWave
+
+# Test environment directories
+CHECK_WAVE_DIR := tests/checkWAVE
+PLAY_WAVE_DIR := tests/playWAVE
+PLAY_MIDI_DIR := tests/playMIDI
+PY_MIDI_VENV := $(PLAY_MIDI_DIR)/.venv
+
+###############################################################################
+# Python environment setup
+###############################################################################
+
+build-python:
+	@echo "\n=== Setting up Python environment ==="
+	cd $(PY_PROJECT_DIR) && \
+	@python3 -m venv .venv && \
+	.venv/bin/pip3 install --upgrade pip && \
+	.venv/bin/pip3 install -e . && \
+	touch .venv/.installed
+	@echo "Python environment ready!"
+
+###############################################################################
+# Julia environment setup
+###############################################################################
+
+build-julia:
+	@echo "\n=== Setting up Julia environment ==="
+	@julia --project=$(JULIA_PROJECT_DIR) -e 'using Pkg; Pkg.add("MIDI")'
+	@echo "Julia environment ready!"
+
+###############################################################################
+# Test environments setup
+###############################################################################
+
+# Setup for check-wave Julia test environment
+build-check-wave:
+	@echo "Building check-wave environment..."
+	@julia --project=$(CHECK_WAVE_DIR) -e 'using Pkg; Pkg.add("WAV")'
+	@echo "check-wave environment built!"
+
+# Setup for play-wave Julia test environment
+build-play-wave:
+	@echo "Building play-wave environment..."
+	@julia --project=$(PLAY_WAVE_DIR) -e 'using Pkg; Pkg.add("WAV")'
+	@echo "play-wave environment built!"
+
+# Setup for play-midi Python test environment
+build-play-midi:
+	@echo "Building play-midi environment..."
+	cd $(PLAY_MIDI_DIR) && \
+	@python3 -m venv .venv && \
+	.venv/bin/pip3 install --upgrade pip && \
+	.venv/bin/pip3 install -e . && \
+	touch .venv/.installed
+	@echo "play-midi environment built!"

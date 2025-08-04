@@ -1,0 +1,18 @@
+[project]
+name = "note-generator"
+version = "1.0.0"
+description = "Generate musical notes in MIDI files"
+authors = [{name = "Bruno RNS"}, {email = "brunoriansouza@gmail.com"}]
+requires-python = ">=3.12"
+dependencies = [
+    "musicpy",
+    "mido",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["generateNote"]
+package-dir = {"" = "src"}

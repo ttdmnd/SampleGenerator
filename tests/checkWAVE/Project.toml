@@ -1,0 +1,10 @@
+name = "checkWave"
+uuid = "b31ca7f6-7098-11f0-b66f-4f34bd50e2f5"
+authors = ["Bruno RNS <brunoriansouza@gmail.com>"]
+version = "1.0.0"
+
+[deps]
+WAV = "8149f6b0-98f6-5db9-b78f-408fbbb8ef88"
+
+[compat]
+WAV = "1.2.0"

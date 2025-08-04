@@ -1,0 +1,31 @@
+###############################################################################
+# Makefile.clean - Cleans Python virtual environments for project and tests
+###############################################################################
+
+.PHONY: clean clean-tests
+
+# Project environment variables
+PY_PROJECT_DIR := src/generateNote
+PY_VENV := $(PY_PROJECT_DIR)/.venv
+
+# Test environment variables
+PY_TEST_DIR := tests/playMIDI
+PY_TEST_VENV := $(PY_TEST_DIR)/.venv
+
+###############################################################################
+# Clean main project Python environment
+###############################################################################
+
+clean: clean-tests
+	@echo "Cleaning main project Python environment..."
+	rm -rf $(PY_VENV)
+	@echo "Main project environment cleaned!"
+
+###############################################################################
+# Clean test Python environments
+###############################################################################
+
+clean-tests:
+	@echo "Cleaning test Python environments..."
+	rm -rf $(PY_TEST_VENV)
+	@echo
